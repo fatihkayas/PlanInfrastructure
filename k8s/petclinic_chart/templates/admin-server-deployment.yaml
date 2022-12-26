@@ -38,5 +38,5 @@ spec:
 
       imagePullSecrets:
         - name: regcred
-      restartPolicy: Always
+      restartPolicy: Always # sss
 status: {}
