@@ -13,9 +13,9 @@ metadata:
     io.kompose.service: api-gateway
   name: api-gateway
 spec:
-   ingressClassName: nginx
+  ingressClassName: nginx
   rules:
-    - host: '{{ .Values.DNS_NAME }}'
+    - host: '{{ .values.DNS_NAME }}'
       http:
         paths:
           - backend:
