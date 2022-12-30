@@ -20,6 +20,6 @@ spec:
       targetPort: 8080
   selector:
     io.kompose.service: api-gateway
-  type: NodePort
+  type: NodePort # nodeport
 status:
   loadBalancer: {}
