@@ -29,7 +29,7 @@ spec:
               value: -XX:+UnlockExperimentalVMOptions -Djava.security.egd=file:/dev/./urandom
           image: openzipkin/zipkin
           name: tracing-server
-          ports: 
+          ports:
             - containerPort: 9411
           resources: {}
       initContainers:
