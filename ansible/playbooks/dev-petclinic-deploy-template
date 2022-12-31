@@ -21,8 +21,8 @@
       kubectl create secret generic regcred -n petclinic-dev \
         --from-file=.dockerconfigjson=/home/ubuntu/.docker/config.json \
         --type=kubernetes.io/dockerconfigjson
-      AWS_REGION=$AWS_REGION helm repo add stable-petclinicapp-carlos s3://petclinic-helm-charts-carlos/stable/myapp/
+      AWS_REGION=$AWS_REGION helm repo add haci-ibrahim s3://petclinic-helm-charts-ibrahim/stable/myapp/
       AWS_REGION=$AWS_REGION helm repo update
       AWS_REGION=$AWS_REGION helm upgrade --install \
-        petclinic-app-release stable-petclinic/petclinic_chart --version ${BUILD_NUMBER} \
+        petclinic-app-release haci-ibrahim/petclinic_chart --version ${BUILD_NUMBER} \
         --namespace petclinic-dev
